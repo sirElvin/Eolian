@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+   <link rel="stylesheet" href="assets\css\style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+   <style>
+      /*
+     https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+     box-shadow: [inset?] [top] [left] [blur] [size] [color];
+   
+     Tips:
+       - We're setting all the blurs to 0 since we want a solid fill.
+       - Add the inset keyword so the box-shadow is on the inside of the element
+       - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+       - Multiple shadows can be stacked
+       - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+   */
+   .raise:hover,
+   .raise:focus {
+     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+     transform: translateY(-0.25em);
+   }
+   
+   .offset {
+     box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+   }
+   .offset:hover, .offset:focus {
+     box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+   }
+   
+   .fill {
+     --color: #a972cb;
+     --hover: #cb72aa;
+   }
+   
+   .pulse {
+     --color: #ef6eae;
+     --hover: #ef8f6e;
+   }
+   
+   .close {
+     --color: #ff7f82;
+     --hover: #ffdc7f;
+   }
+   
+   .raise {
+     --color: Gray;
+     --hover: blue;
+   }
+   
+   .up {
+     --color: #e4cb58;
+     --hover: #94e458;
+   }
+   
+   .slide {
+     --color: #8fc866;
+     --hover: #66c887;
+   }
+   
+   .offset {
+     --color: #19bc8b;
+     --hover: #1973bc;
+   }
+   
+   button {
+     color: var(--color);
+     transition: 0.25s;
+   }
+   button:hover, button:focus {
+     border-color: var(--hover);
+     color:black;
+   }
+   
+   
+   
+   button {
+     background: none;
+    
+     font: inherit;
+     line-height: 1;
+     margin: 0.5em;
+     padding: 1em 2em;
+   }/*# sourceMappingURL=lmao.css.map */
+   .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
+   
+     </style>
+     </head>
+   <body>
+       <header class="lol text-gray-600 body-font" style="margin-top: 0;">
+           <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center " style="margin-top: -40px; height: 150px;">
+             <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+               <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                 
+               </svg> -->
+               <img src="assets\images\hero-logo.png" class=" text-white p-2  " alt="" style="height: 150px;">
+            </a>
+             <!-- <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" style="margin-left: 420px;"> -->
+               <a href="Ai.html"><button class="raise" style="font-size: 18px; margin-left: 440px;">Chat With AI</button></a>
+               <!-- <a href="Ai.html" class="butane mr-20 hover:text-gray-900 text-lg" >Chat With AI</a>
+               <a href="people.html"class="butane mr-20 hover:text-gray-900 text-lg">Chat With People</a>
+               <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
+               <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
+             </nav> -->
+             <a href="people.html"><button id="myButton"class="raise text-black" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+             <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
+             <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -30px;">About Us</button></a>
+   
+           </div>  
+         </header>
+         <br>
+         <br>
+         
+      <section class="pop text-gray-600 body-font">
+        <div class="container px-5  mx-auto">
+          <div class="text-center mb-20">
+            <h1 class=" sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4" style="color: blue;font-size: 60px;"><b>Chat With People</b></h1>
+          
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Get connected to a live server and talk to people randomly from all across the Globe.Talk about something, share your confession, meet a cheerful community that makes you cheer up:)</p>
+          </div>
+          <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Dont Share personal Mail and passwords</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Dont click links send by others wihout certainty</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Report Inappropriate Behavior</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Have a Good Time</span>
+              </div>
+            </div>
+            
+          
+          </div>
+
+          <center><a href="anonymousmf.html"><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Give It A Go</button></a></
+      
+        </div>
+      </section>
+
+     
+    <script>
+              window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const myButton = document.getElementById('myButton');
+  myButton.classList.add('always-hover');
+});
+    </script>
+
+</body>
+</html>

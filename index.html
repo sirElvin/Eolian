@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+   <link rel="stylesheet" href="assets\css\style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+  <style>
+   /*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: Gray;
+  --hover: blue;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color:black;
+}
+
+
+
+button {
+  background: none;
+ 
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}/*# sourceMappingURL=lmao.css.map */
+  </style>
+  </head>
+<body>
+    <header class="lol text-gray-600 body-font" style="margin-top: 0;">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center " style="margin-top: -40px; height: 150px;">
+          <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              
+            </svg> -->
+            <img src="assets\images\hero-logo.png" class=" text-white p-2  " alt="" style="height: 150px;">
+         </a>
+          <!-- <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" style="margin-left: 420px;"> -->
+            <a href="Ai.html"><button class="raise" style="font-size: 18px; margin-left: 440px;">Chat With AI</button></a>
+            <!-- <a href="Ai.html" class="butane mr-20 hover:text-gray-900 text-lg" >Chat With AI</a>
+            <a href="people.html"class="butane mr-20 hover:text-gray-900 text-lg">Chat With People</a>
+            <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
+            <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
+          </nav> -->
+          <a href="people.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+          <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
+          <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">About Us</button></a>
+
+        </div>  
+      </header>
+
+      <section class=" pop text-gray-400 bg-white-900 body-font">
+        <div class="pop container mx-auto flex px-5 py-0 items-center justify-center flex-col">
+          <img class="lg:w-2/6 md:w-4/6 w-5/6 mb-0 object-cover object-center rounded h-[3000px]" alt="hero" src="assets\images\Front Pagfe.png">
+          <div class="text-center lg:w-2/3 w-full">
+            <br>
+            <h1><span class="ggez_ title-font sm:text-4xl text-9xl mb-5 font-medium text-black font-bold">Introducing</span> <span class="ggez ">Speak</span></h1>
+           
+            <p class="leading-relaxed mb-8 text-black">Discover Speak - a dynamic platform where you can chat with both people and AI, find support, and share your thoughts through blogs. A personal therapist that makes you cheer up!</p>
+            <div class="flex justify-center">
+              <a href="#herodown" ><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Functions</button></a>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br><br>
+<div id="herodown"></div>
+<br><br><br><br>
+<h1><center><span class=" title-font sm:text-4xl text-9xl mb-5 font-medium text-black pop" style="color: rgb(20, 20, 226); font-size: 42px;" ><b>What's Speak capable of?</b></center></h1>
+          
+      <br>
+      <section  class="disW text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-19 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="assets\images\SPEAK BOT (1).png">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"> Custom AI
+              
+            </h1>
+            <p class="mb-8 leading-relaxed">Introducing our unique AI companion—a friendly confidant ready to listen without judgment. Share your thoughts openly and safely, knowing you're conversing with a supportive and understanding virtual friend.</p>
+            <div class="flex justify-center">
+              <a href="Ai.html"><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Give It A Go</button></a>
+             
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="disW text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Chat Portal
+
+
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed">Step into our anonymous chat portal, designed for practicing socialization or sharing thoughts confidentially. Engage anonymously, exchanging support or expressing deeper emotions in a secure, judgment-free space, fostering meaningful connections and offering comfort during challenging times</p>
+            <div class="flex justify-center">
+              <a href="people.html"><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Give It A Go</button></a>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="assets\images\Hey  Are you here to socialize too.png">
+          </div>
+        </div>
+      </section>
+
+      <section class="disW text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-22 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="assets\images\Create and Read BlogS.png">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Blogs
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed">Step into our anonymous chat portal, designed for practicing socialization or sharing thoughts confidentially. Engage anonymously, exchanging support or expressing deeper emotions in a secure, judgment-free space, fostering meaningful connections and offering comfort during challenging times</p>
+            <div class="flex justify-center">
+              <a href="blog.html"><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Give It A Go</button></a>  </div>
+          </div>
+        </div>
+      </section>
+     
+</body>
+</html>

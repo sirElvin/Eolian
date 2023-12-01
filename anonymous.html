@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+  
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+  .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
+</style>
+<body>
+    <header class="lol text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a href="index.html"class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              
+            </svg> -->
+            <img src="assets\images\hero-logo.png" class="w-20 h-20 text-white p-2  " alt="">
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href="Ai.html" class="mr-20 hover:text-gray-900 text-lg ">Chat With AI</a>
+            <a href="people.html" id="myButton" class="mr-20 text-black text-lg">Chat With People</a>
+            <a class="mr-20 hover:text-gray-900 text-lg">Blog</a>
+            <a class="mr-20 hover:text-gray-900 text-lg">About US</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>  
+      </header>
+
+  <div class="pop-up_">
+    <h1 >Chat With People</h1>
+    </div>
+
+    <div class="pop-up3" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif>
+</div>
+  <div class="chat-container1">
+    <div class="chat-box" id="chat-box">
+      <!-- Chat messages will be displayed here -->
+    </div>
+    <div class="user-input">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+
+  <script>
+            window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const myButton = document.getElementById('myButton');
+  myButton.classList.add('always-hover');
+});
+  </script>
+</body>
+</html>

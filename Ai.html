@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+   <link rel="stylesheet" href="assets\css\style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+   <style>
+   /*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: Gray;
+  --hover: blue;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color:black;
+}
+
+
+.ges {
+  border-color: var(--hover);
+  color: black;
+   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+button {
+  background: none;
+ 
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}/*# sourceMappingURL=lmao.css.map */
+/* Simulate hover effect without actual hover or focus */
+.always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
+
+  </style>
+  </head>
+<body>
+    <header class="lol text-gray-600 body-font" style="margin-top: 0;">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center " style="margin-top: -40px; height: 150px;">
+          <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              
+            </svg> -->
+            <img src="assets\images\hero-logo.png" class=" text-white p-2  " alt="" style="height: 150px;">
+         </a>
+          <!-- <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" style="margin-left: 420px;"> -->
+            <a href="Ai.html"><button class="raise text-black" id="myButton"style="font-size: 18px; margin-left: 440px; ">Chat With AI</button></a>
+            <!-- <a href="Ai.html" class="butane mr-20 hover:text-gray-900 text-lg" >Chat With AI</a>
+            <a href="people.html"class="butane mr-20 hover:text-gray-900 text-lg">Chat With People</a>
+            <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
+            <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
+          </nav> -->
+          <a href="people.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+          <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
+          <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">About Us</button></a>
+
+        </div>  
+      </header>
+
+      <section class="pop text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-17 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="assets\images\Untitled_design__1_-removebg-preview.png">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Chat With An AI
+            </h1>
+            <br>
+            <p class="mb-8 leading-relaxed">Introducing our unique AI companion—a friendly confidant ready to listen without judgment. Share your thoughts openly and safely, knowing you're conversing with a supportive and understanding virtual friend.It is especially designed to cheer you up:)
+           <br><br>
+           <a href="#herodown"><button class="raise" style="background-color:rgb(66, 66, 231); color:white;">Give It A Go</button></a>
+               </div>
+          </div>
+        </div>
+      </section>
+<br><br><br><br><br><br>
+
+      <!-- <iframe  id="herodown" id=KYBYICKPXF loading="eager" src="https://embed.pickaxeproject.com/axe?id=Its_safe_to_talk_here_Q9LPB&mode=embed_gold&host=beta&theme=light&opacity=100&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=2&s_r=2" width="100%" height="500px" onMouseOver="this.style.boxShadow='0px 6px 6px -3px rgba(0,0,0,0.1)'" onMouseOut="this.style.boxShadow='none'"  frameBorder="0" style=></iframe> -->
+      <iframe id="herodown" id=ZTYLJIKLTE loading="eager" src="https://embed.pickaxeproject.com/axe?id=Its_safe_to_Talk_here_VIAH5&mode=embed_gold&host=beta&theme=light&opacity=100&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=2&s_r=2" width="100%" height="500px" onMouseOver="this.style.boxShadow='0px 6px 6px -3px rgba(0,0,0,0.1)'" onMouseOut="this.style.boxShadow='none'" style="border:1px solid rgba(0, 0, 0, 1);transition:.3s;border-radius:4px;" frameBorder="0"></iframe>
+      <script>
+        window.onload = function() {
+  window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const myButton = document.getElementById('myButton');
+  myButton.classList.add('always-hover');
+});
+
+
+      </script>
+
+      </body>
+      </html>

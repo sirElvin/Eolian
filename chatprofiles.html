@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak | Removing Boundaries, Healing Souls</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+ <script defer src="chatprofiles.js"></script>
+ <link rel="stylesheet" href="assets\css\style.css">
+ <style>
+
+
+html
+{
+  /* overflow-y: hidden; */
+}
+
+main {
+  
+  width: 100%;
+  
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+ 
+}
+
+.item {
+  width: 200px;
+  height: 300px;
+  margin-top: 1200px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+
+  &:nth-child(1), &:nth-child(2) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  &:nth-child(3) { left: 50%; }
+  &:nth-child(4) { left: calc(50% + 220px); }
+  &:nth-child(5) { left: calc(50% + 440px); }
+  &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+}
+
+.content {
+  width: min(30vw,400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica,sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  display: none;
+
+  & .title {
+    font-family: 'arial-black';
+    text-transform: uppercase;
+  }
+
+  & .description {
+    line-height: 1.7;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  & button {
+    width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+  }
+}
+
+.item:nth-of-type(2) .content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+
+  
+    .nav {
+  display: grid;
+  grid-auto-flow: column; /* Arrange items in a column */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
+  margin-top: 1100px;/* Adjust the gap between buttons as needed */
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+ /* Adjust the position of the buttons from the bottom as needed */
+}
+ /* Adjust the position of the buttons from the bottom as needed */
+
+
+
+
+ .btn {
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    margin: 0 0.25rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    font-family: "Arial", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (width > 650px) and (width < 900px) {
+  .content {
+    & .title        { font-size: 1rem; }
+    & .description  { font-size: 0.7rem; }
+    & button        { font-size: 0.7rem; }
+  }
+  .item {
+    width: 160px;
+    height: 270px;
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 170px); }
+    &:nth-child(5) { left: calc(50% + 340px); }
+    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+  }
+}
+
+@media (width < 650px) {
+  .content {
+    & .title        { font-size: 0.9rem; }
+    & .description  { font-size: 0.65rem; }
+    & button        { font-size: 0.7rem; }
+  }
+  .item {
+    width: 130px;
+    height: 220px;
+
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 140px); }
+    &:nth-child(5) { left: calc(50% + 280px); }
+    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+  }
+}
+.raise:hover,
+   .raise:focus {
+     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+     transform: translateY(-0.25em);
+   }
+   
+   .offset {
+     box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+   }
+   .offset:hover, .offset:focus {
+     box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+   }
+   
+   .fill {
+     --color: #a972cb;
+     --hover: #cb72aa;
+   }
+   
+   .pulse {
+     --color: #ef6eae;
+     --hover: #ef8f6e;
+   }
+   
+   .close {
+     --color: #ff7f82;
+     --hover: #ffdc7f;
+   }
+   
+   .raise {
+     --color: Gray;
+     --hover: blue;
+   }
+   
+   .up {
+     --color: #e4cb58;
+     --hover: #94e458;
+   }
+   
+   .slide {
+     --color: #8fc866;
+     --hover: #66c887;
+   }
+   
+   .offset {
+     --color: #19bc8b;
+     --hover: #1973bc;
+   }
+   
+   button {
+     color: var(--color);
+     transition: 0.25s;
+   }
+   button:hover, button:focus {
+     border-color: var(--hover);
+     color:black;
+   }
+   
+   
+   
+   button {
+     background: none;
+    
+     font: inherit;
+     line-height: 1;
+     margin: 0.5em;
+     padding: 1em 2em;
+   }/*# sourceMappingURL=lmao.css.map */
+   .always-hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s; /* Adding transition for smooth effect */
+}
+     </style>
+     </head>
+   <body>
+       <header class="lol text-gray-600 body-font" style="margin-top: 0;">
+           <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center " style="margin-top: -40px; height: 150px;">
+             <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+               <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                 
+               </svg> -->
+               <img src="assets\images\hero-logo.png" class=" text-white p-2  " alt="" style="height: 150px;">
+            </a>
+             <!-- <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" style="margin-left: 420px;"> -->
+               <a href="Ai.html"><button class="raise" style="font-size: 18px; margin-left: 440px;">Chat With AI</button></a>
+               <!-- <a href="Ai.html" class="butane mr-20 hover:text-gray-900 text-lg" >Chat With AI</a>
+               <a href="people.html"class="butane mr-20 hover:text-gray-900 text-lg">Chat With People</a>
+               <a href="blog.html"class="butane mr-20 hover:text-gray-900 text-lg">Blog</a>
+               <a href="About.html"class="butane mr-20 hover:text-gray-900 text-lg">About US</a>
+             </nav> -->
+             <a href="people.html"><button class="raise text-black" id="myButton"style="font-size: 18px; margin-left: -10px;">Chat With People</button></a>
+             <a href="blog.html"><button class="raise" style="font-size: 18px; margin-left: -10px;">Blogs</button></a>
+             <a href="About.html"><button class="raise" style="font-size: 18px; margin-left: -30px;">About Us</button></a>
+   
+           </div>  
+         </header>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pop container mx-auto flex px-5 py-0 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-0 object-cover object-center rounded" class="pop" alt="hero" src="assets\images\image.png">
+      <div class="text-center lg:w-2/3 w-full">
+        <br>
+        <h1><span class="ggez_ title-font sm:text-4xl text-9xl mb-5 font-medium text-black font-bold"> <span class="ggez ">Chat With People</span></h1>
+        <br>
+        <p class="leading-relaxed mb-8 text-black">Via This Portal You can get in touch with people you like and overcome your social anxiety. You can easily decrease your social anxiety and sometimes just find a friend in this wholesome community :)</p>
+        <div class="flex justify-center">
+          <a href="#herodown" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Connect with People</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+    <main>
+      
+      <ul class='slider'>
+        
+        <li class='item 'id="herodown" style="background-image: url(''https://cdn.vox-cdn.com/thumbor/H1A3QiZ1dYN5NkjnlP9soG3GCss=/0x0:4000x3050/1520x1013/filters:focal(1743x712:2383x1352)/cdn.vox-cdn.com/uploads/chorus_image/image/66227180/NathanG_09272021CG_01960_R1.25.jpg')">
+        
+          <div class='content' >
+           
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://images.pexels.com/photos/1543/landscape-nature-man-person.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+          <div class='content'>
+            <h1 class='title' style="font-size: 50px;">John "Maxx" Rando</h1>
+            <p class='description' style="font-size: 15px;" > Into guitars and rock music .Leader of  a band.Works Out:)  </p>
+            <button>Chat </button>
+          </div>
+        </li>
+
+        <li class='item' style="background-image: url('https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2017/10/jughead-jones-riverdale-character-ranking-102517.jpg')">
+          <div class='content'>
+            <h2 class='title' style="font-size: 50px;">Forescythe Pendalton Jones III (Jughead)</h2>
+            <p class='description' style="font-size: 15px;"> A writer. Uses sadonic humor to relate with the world. Is really mysterious in an interesting way:)  </p>
+           <a href="chat.html"> <button>Connect</button></a>
+          </div>
+        </li>
+       
+        <li class='item' style="background-image: url('https://th.bing.com/th/id/R.8f4b0ffe016d7161fe1b2428195ed641?rik=GLWFdrXOdTfAMw&pid=ImgRaw&r=0&sres=1&sresct=1')">
+          <div class='content'>
+            <h2 class='title' style="font-size: 50px;">Dr. Iro Zhecklovob</h2>
+            <p class='description' style="font-size: 15px;""> A Theoritical Physicist. Tenured proffessor at NYU. Masters in Philosphy  </p>
+            <button>Bond</button>  
+          </div>
+        </li>
+        <li class='item' style="background-image: url('https://th.bing.com/th/id/R.bc23ae01ed92e163a086f5e57dd77ceb?rik=ab69%2fvbyNpjBvw&pid=ImgRaw&r=0')">
+          <div class='content'>
+            <h2 class='title' style=" font-size: 50px">Xing Chao Lin</h2>
+            <p class='description' style="font-size: 15px;"> Mathematician with a keen interst in Music. Wants to Make Friends and is a great listener :)  </p>
+            
+            <button>Message</button>
+          </div>
+        </li>
+       
+        
+      </ul>
+      <nav class='nav'>
+        <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+        <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+      </nav>
+    </main>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+      window.onload = function() {
+window.scrollTo(0, 0);
+};
+
+// Apply the always-hover class to the button on page load
+document.addEventListener('DOMContentLoaded', function() {
+const myButton = document.getElementById('myButton');
+myButton.classList.add('always-hover');
+});
+</script>
+
+    </body>
+    </html>

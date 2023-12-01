@@ -1,0 +1,46 @@
+
+body
+{
+   
+}
+section
+{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    color: blue;
+}
+
+
+.pop_
+{
+    animation: pop 1s ease forwards;
+}
+.hidden {
+opacity: 0;
+transform:translateY(100%);
+transition: all 1s;
+}
+
+.show{
+opacity: 1;
+transform:translateY(0);
+transition: all 1s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+@keyframes pop{
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
